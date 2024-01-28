@@ -1,7 +1,6 @@
 import customtkinter as ctk
 from tkinter import *
 from Aplicacao import App
-from threading import Thread
 
 
 def time():

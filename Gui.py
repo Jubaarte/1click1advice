@@ -1,6 +1,8 @@
 import customtkinter as ctk
 from tkinter import *
 from Aplicacao import App
+from threading import Thread
+
 
 def time():
     App.relogio(App)
@@ -18,7 +20,7 @@ def mostrar():
     pass
 
 def aconselhar():
-    App.aconselhar(App)
+    Thread(target=App.aconselhar(App)).start()
     textoconselho.configure(text=App.conselhoptbr)
 
     pass
@@ -38,12 +40,11 @@ textoconselho = ctk.CTkLabel(janela, text="", font=("Robot", 14, "bold"), fg_col
 
 textohora = ctk.CTkLabel(janela, text="", font=("Robot", 16), fg_color="#FFFDCD", bg_color="#FFFDCD", text_color="black")
 
-buscarconselho = ctk.CTkButton(janela, text="BUSCAR CONSELHO", font=("Robot", 24, "bold"), fg_color="#FFFDCD", bg_color="#FFFDCD", text_color="black", hover_color="#fffcb3", command=aconselhar)
+buscarconselho = ctk.CTkButton(janela, text="BUSCAR CONSELHO", font=("Robot", 24, "bold"), fg_color="#FFFDCD", bg_color="#FFFDCD", text_color="black", hover_color="#fffcb3", command=lambda: (Thread(target=aconselhar).start()))
 
 iniciar = ctk.CTkButton(janela, text="INICIAR", font=("Robot", 24, "bold"), fg_color="#FFFDCD", bg_color="#FFFDCD", text_color="black", hover_color="#fffcb3", command=mostrar)
 iniciar.place(relx=0.5, y=200, anchor="center")
 
 
-time()
-
+Thread(target=time).start()
 janela.mainloop()

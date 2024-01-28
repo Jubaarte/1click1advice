@@ -1,4 +1,13 @@
+
+
+
+
+![image](https://github.com/Jubaarte/1click1advice/assets/113859220/f237eb43-d9d2-46aa-9cf4-3b7415ce7d17)  ![image](https://github.com/Jubaarte/1click1advice/assets/113859220/522fbbb7-4688-462f-952c-5a8af2472329)
+
+
 # One click - One advice
+
+
 
 **This is my first project as a non-progammer and it is done in python.**
 

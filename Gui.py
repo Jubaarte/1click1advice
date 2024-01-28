@@ -2,7 +2,6 @@ import customtkinter as ctk
 from tkinter import *
 from Aplicacao import App
 
-
 def time():
     App.relogio(App)
     textohora.configure(text=App.horario)
